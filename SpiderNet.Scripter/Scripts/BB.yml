@@ -1,0 +1,4 @@
+goto: "https://www.licitacoes-e.com.br/aop/pesquisar-licitacao.aop?opcao=preencherpesquisaridentificador"
+fill: "input[name='identificador']", "123456789"
+click: "input[name='pesquisar']"
+solve_recaptcha:

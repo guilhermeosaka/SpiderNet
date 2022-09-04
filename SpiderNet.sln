@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiderNet.Utility", "SpiderNet.Utility\SpiderNet.Utility.csproj", "{BFB5DA9C-D297-44CA-A190-AA372001B871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiderNet.Utility.Tests", "SpiderNet.Utility.Tests\SpiderNet.Utility.Tests.csproj", "{6858E596-DE9A-4F29-8552-A4BD6ACD54CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiderNet.Scripter", "SpiderNet.Scripter\SpiderNet.Scripter.csproj", "{86BEA3DA-153B-4507-BC9B-A579A18D5B97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFB5DA9C-D297-44CA-A190-AA372001B871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB5DA9C-D297-44CA-A190-AA372001B871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB5DA9C-D297-44CA-A190-AA372001B871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB5DA9C-D297-44CA-A190-AA372001B871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6858E596-DE9A-4F29-8552-A4BD6ACD54CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6858E596-DE9A-4F29-8552-A4BD6ACD54CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6858E596-DE9A-4F29-8552-A4BD6ACD54CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6858E596-DE9A-4F29-8552-A4BD6ACD54CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BEA3DA-153B-4507-BC9B-A579A18D5B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BEA3DA-153B-4507-BC9B-A579A18D5B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BEA3DA-153B-4507-BC9B-A579A18D5B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BEA3DA-153B-4507-BC9B-A579A18D5B97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
