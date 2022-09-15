@@ -1,37 +1,41 @@
+// id
+
 using Microsoft.Playwright;
 
-namespace SpiderNet.Core.Models.PlaywrightCore;
+namespace SpiderNet.Core.Engine.PlaywrightCore;
 
-public abstract class SpiderPlaywright : Spider
+public abstract class SpiderPlaywright : Spider<BrowserPlaywright>
 {
+    private ConfigPlaywright _config;
     
+    public SpiderPlaywright(ConfigPlaywright config)
+    {
+        _config = config;
+    }
     
-    public string Name { get; set; }
-    public bool Headless { get; set; }
-    public int SlowMotion { get; set; }
-
     private IPlaywright? _playwright;
-    private IBrowser? _browser;
+    private Microsoft.Playwright.IBrowser? _browserPW;
     private IBrowserContext? _context;
-    
-    async Task ConfigureAsync()
+
+    protected override async Task ConfigureAsync()
     {
         _playwright = await Playwright.CreateAsync();
-        _browser = await _playwright.Chromium.LaunchAsync(new() {
-            Headless = Headless,
-            SlowMo = SlowMotion
+        _browserPW = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        {
+            Headless = _config.Headless,
+            SlowMo = _config.SlowMotion
         });
-        _context = await _browser.NewContextAsync();
+        _context = await _browserPW.NewContextAsync();
     }
 
-    async Task RunAsync() => await RunAsync(_context!);
+    protected override async Task RunAsync() => await RunAsync(_context!);
 
     protected abstract Task RunAsync(IBrowserContext context);
 
     protected override async Task DisposeAsync()
     {
         if (_context != null) await _context.DisposeAsync();
-        if (_browser != null) await _browser.DisposeAsync();
+        if (_browserPW != null) await _browserPW.DisposeAsync();
         _playwright?.Dispose();
     }
 }

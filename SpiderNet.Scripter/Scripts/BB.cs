@@ -1,11 +1,8 @@
-using System;
-using System.Threading.Tasks;
-using SpiderNet.Scripter;
 using Microsoft.Playwright;
 
 namespace SpiderNet.Scripter.Scripts
 {
-    public class BB : IRunner
+    public class BB : IRunnable
     {
         public async Task Run()
         {

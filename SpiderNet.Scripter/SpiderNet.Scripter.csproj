@@ -21,4 +21,14 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SpiderNet.Core\SpiderNet.Core.csproj" />
+      <ProjectReference Include="..\SpiderNet.Utility\SpiderNet.Utility.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Edital\Scripts" />
+      <Folder Include="Scripts\Edital" />
+    </ItemGroup>
+
 </Project>

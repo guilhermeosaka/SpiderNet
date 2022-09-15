@@ -1,6 +1,6 @@
 namespace SpiderNet.Scripter;
 
-public interface IRunner
+public interface IRunnable
 {
     Task Run();   
 }
